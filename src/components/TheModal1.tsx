@@ -1,20 +1,19 @@
 import '@style/Modal.scss'
-import { useState } from 'react'
 
+
+// Retire les lignes en commentaire pour passer un boolean en props
+// et afficher un message de jedi ou de seigneur sith
+// pour passer la valeur du boolean dans le composant, tu peux demander à chatgpt ;)
 // interface propsInterface { isJediMessage: boolean }
 
 // const TheModal = ({ isJediMessage }: propsInterface) => {
-const TheModal = ({ isJediMessage }: { isJediMessage: boolean }) => {
-  const [styleDisplayModale, setStyleDisplayModale] = useState({})
+const TheModal = () => {
 
-  const handleclose = () => {
-    setStyleDisplayModale({ display: 'none' })
-  }
   return (
-    <div className="modal" style={styleDisplayModale}>
+    <div className="modal">
       <div className="modal-content">
-        <span className="close" onClick={handleclose}>&times;</span>
-        <h3>{isJediMessage ? <>May the force be with you</> : <>Sorry, you are not a Jedi</>}</h3>
+        <h3>May the force be with you</h3>
+        <h3>Sorry, you are not a Jedi</h3>
       </div>
     </div>
   )

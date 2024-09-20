@@ -1,13 +1,7 @@
 import '@style/Layout.scss'
 import TheModal2 from '@components/TheModal2'
-import { ChangeEvent, useState } from 'react'
 
-const TheVersion2 = () => {
-  const [message, setMessage] = useState<string>("Sorry, you are not a Jedi")
-
-  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setMessage(event.target.checked ? "May the force be with you" : "Sorry, you are not a Jedi")
-  }
+const TheExercice2 = () => {
   return (
     <>
       <h2>Deuxième défi défi</h2>
@@ -16,11 +10,11 @@ const TheVersion2 = () => {
       <p>True : May the Force be with you, young Jedi!</p>
       <p>False : Sorry,you are not a jedi</p>
       <label >Es-tu un jedi??
-        <input type="checkbox" name="jedi" onChange={handleCheckboxChange} />
+        <input type="checkbox" name="jedi" />
       </label>
-      <TheModal2 message={message} />
+      <TheModal2 />
     </>
   )
 }
 
-export default TheVersion2
+export default TheExercice2

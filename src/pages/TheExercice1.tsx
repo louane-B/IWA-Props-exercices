@@ -2,11 +2,8 @@ import '@style/Layout.scss'
 import TheModal1 from '@components/TheModal1'
 import { ChangeEvent, useState } from 'react'
 
-const TheVersion1 = () => {
-  const [isJedi, setIsJedi] = useState<boolean>(false)
-
+const TheExercice1 = () => {
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setIsJedi(event.target.checked)
   }
 
   return (
@@ -16,12 +13,13 @@ const TheVersion1 = () => {
       <p>True : May the Force be with you, young Jedi!</p>
       <p>False : Sorry,you are not a jedi</p>
       <p>La valeur du boolean provient du checkbox plus bas ici : </p>
+      <p>Petit rappel, tu peux utiliser onChange et ensuite inspecter <code>event.target.checked</code></p>
       <label >Es-tu un jedi??
         <input type="checkbox" name="jedi" onChange={handleCheckboxChange} />
       </label>
-      <TheModal1 isJediMessage={isJedi} />
+      <TheModal1 />
     </>
   )
 }
 
-export default TheVersion1
+export default TheExercice1

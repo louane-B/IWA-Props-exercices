@@ -1,22 +1,20 @@
 import '@style/CharacterCard.scss'
-import { ForceWeilder } from '../types/Character'
 import ALightSaber from './ALightSaber'
+import LightSaberColor from '../types/LightSaberColorEnum'
 
-interface propsInterface { character: ForceWeilder }
-
-const CharacterCard = ({ character }: propsInterface) => {
+const ACharacterCard = () => {
   return (
     <div className="card">
       <div className="card-content">
-        <h2 className="name">{character.name}</h2>
+        <h2 className="name">L'INFO DE TON CHARACTER</h2>
         <p><span className="info-title">Lightsaber:</span>
-          <ALightSaber color={character.lightsaberColor} />
+          <ALightSaber color={LightSaberColor.Green} />
         </p>
-        <p><span className="info-title">Rank:</span> {character.rank}</p>
-        <p><span className="info-title">Force Level:</span> {character.forceLevel}</p>
+        <p><span className="info-title">Rank:</span> L'INFO DE TON CHARACTER</p>
+        <p><span className="info-title">Force Level:</span> L'INFO DE TON CHARACTER</p>
       </div>
     </div>
   )
 }
 
-export default CharacterCard
+export default ACharacterCard

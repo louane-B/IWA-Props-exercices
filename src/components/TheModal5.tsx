@@ -1,31 +1,18 @@
 import '@style/Modal.scss'
-import { useState } from 'react'
-import CharacterCard from '@components/ACharacterCard'
-import { ForceWeilder } from '../types/Character'
+import ACharacterCard from '@components/ACharacterCard'
 
-interface propsInterface {
-  character: ForceWeilder,
-  onNext: () => void,
-  onPrevious: () => void
-}
-
-const TheModal = ({ character, onNext, onPrevious }: propsInterface) => {
+const TheModal = () => {
   const handleNext = () => {
-    onNext()
+    // Ici, tu dois appeler la fonction onNext
   }
 
   const handlePrevious = () => {
-    onPrevious()
-  }
-  const [styleDisplayModale, setStyleDisplayModale] = useState({})
-
-  const handleclose = () => {
-    setStyleDisplayModale({ display: 'none' })
+    // Ici, tu dois appeler la fonction onPrevious
   }
   return (
-    <div className="modal" style={styleDisplayModale}>
+    <div className="modal">
       <div className="modal-content">
-        <CharacterCard character={character} />
+        <ACharacterCard />
         <div className="flex-between">
           <button onClick={handlePrevious}>Précédent</button>
           <button onClick={handleNext}>Suivant</button>

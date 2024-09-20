@@ -4,7 +4,7 @@ interface LightSaberProps {
   color: LightSaberColor
 }
 
-const LightSaber = ({ color }: LightSaberProps) => {
+const ALightSaber = ({ color }: LightSaberProps) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
       <rect className="svg-blade" x="90" y="45" width="300" height="10" rx="5" ry="5" fill={color} filter={`drop-shadow(0 0 10px ${color})`} />
@@ -15,4 +15,4 @@ const LightSaber = ({ color }: LightSaberProps) => {
   )
 }
 
-export default LightSaber
+export default ALightSaber

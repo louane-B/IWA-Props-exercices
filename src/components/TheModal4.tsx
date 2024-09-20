@@ -1,21 +1,12 @@
 import '@style/Modal.scss'
-import { useState } from 'react'
-import CharacterCard from '@components/ACharacterCard'
-import { ForceWeilder } from '../types/Character'
+import ACharacterCard from '@components/ACharacterCard'
 
-interface propsInterface { character: ForceWeilder, isSith: boolean }
-
-const TheModal = ({ character, isSith }: propsInterface) => {
-  const [styleDisplayModale, setStyleDisplayModale] = useState({})
-
-  const handleclose = () => {
-    setStyleDisplayModale({ display: 'none' })
-  }
+const TheModal = () => {
   return (
-    <div className="modal" style={styleDisplayModale}>
+    <div className="modal">
       <div className="modal-content">
-        <CharacterCard character={character} />
-        {isSith && <p>c'est un sith</p>}
+        <ACharacterCard />
+        <p>c'est un sith (ou pas, on ne m'a pas encore passé de props boolean)</p>
       </div>
     </div>
   )
