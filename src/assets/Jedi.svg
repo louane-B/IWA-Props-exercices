@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <!-- Robe -->
+  <path d="M60 100 L100 280 L140 100 Z" fill="#8B4513"/>
+  
+  <!-- Tête -->
+  <circle cx="100" cy="60" r="30" fill="#FFE4B5"/>
+  
+  <!-- Yeux -->
+  <circle cx="90" cy="55" r="3" fill="#000"/>
+  <circle cx="110" cy="55" r="3" fill="#000"/>
+  
+  <!-- Bouche -->
+  <path d="M95 70 Q100 75 105 70" fill="none" stroke="#000" stroke-width="2"/>
+  
+  <rect x="60" y="100" width="80" height="10" fill="#8B4513"/>
+</svg>

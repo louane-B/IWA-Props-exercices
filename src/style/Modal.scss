@@ -1,0 +1,38 @@
+.modal-content {
+  color: #000;
+  position: absolute;
+  left: 10%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  min-height: 10%;
+  top: 15%;
+  transition: transform 1s linear;
+  text-align: center;
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+
+  :hover,
+  :focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #aaaaaa;
+}

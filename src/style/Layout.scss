@@ -1,0 +1,46 @@
+header {
+  padding: 10px 40px;
+  align-items: center;
+
+  .left {
+    .logo {
+      height: 25px;
+      margin-top: 5px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    align-items: center;
+
+    .write {
+      align-items: center;
+      margin-right: 32px;
+
+
+      p {
+        margin-left: 5px;
+      }
+    }
+
+  }
+}
+
+footer {
+  ul {
+    justify-content: space-evenly;
+  }
+
+  li {
+    list-style: none;
+    justify-content: space-evenly;
+  }
+}
+
+main {
+  width: 800px;
+  margin: auto;
+}
