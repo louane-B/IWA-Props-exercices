@@ -1,4 +1,4 @@
-import '@style/Layout.scss'
+import '../style/Layout.scss'
 import { Link } from 'react-router-dom'
 
 function TheHeader() {

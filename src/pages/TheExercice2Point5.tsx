@@ -1,4 +1,4 @@
-import '@style/Layout.scss'
+import '../style/Layout.scss'
 import TheModal2Point5 from '../components/TheModal2Point5'
 import { useState } from 'react'
 

@@ -1,5 +1,5 @@
 import '../style/Layout.scss'
-import TheModal5 from '@components/TheModal5'
+import TheModal5 from '../components/TheModal5'
 import Rank from '../types/RankEnum'
 import LightSaberColor from '../types/LightSaberColorEnum'
 import { ForceWeilder } from '../types/Character'

@@ -1,4 +1,4 @@
-import '@style/Layout.scss'
+import '../style/Layout.scss'
 import { Outlet } from 'react-router-dom'
 
 function TheFooter() {

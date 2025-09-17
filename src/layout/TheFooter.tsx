@@ -1,4 +1,4 @@
-import '@style/Layout.scss'
+import '../style/Layout.scss'
 
 function TheFooter() {
   return (
