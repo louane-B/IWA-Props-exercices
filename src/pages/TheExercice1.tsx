@@ -3,7 +3,9 @@ import TheModal1 from '../components/TheModal1'
 import { ChangeEvent, useState } from 'react'
 
 const TheExercice1 = () => {
+  const [jeSuisUnJedi, setJeSuisUnJedi] = useState(false)
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setJeSuisUnJedi(event.target.checked)
   }
 
   return (
@@ -17,7 +19,7 @@ const TheExercice1 = () => {
       <label >Es-tu un jedi??
         <input type="checkbox" name="jedi" onChange={handleCheckboxChange} />
       </label>
-      <TheModal1 />
+      <TheModal1 isJediMessage={jeSuisUnJedi}/>
     </>
   )
 }
