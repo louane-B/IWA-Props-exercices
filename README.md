@@ -84,3 +84,16 @@ export default TheComponent
 ## Now what?
 
 Dans le dossier /pages, tu peux y trouver les exercices. Ces derniers importent des composants qui sont dans le dossier components. Bon apprentissage!
+
+
+## Est-ce que je peux tester tout ça?
+
+OUI! Il te suffit d'installer l'extension playwright dans vs code et d'aller cliquer sur la petite fiole triangulaire qui apparaîtra à gauche. Cette dernière te permet de lancer les tests.
+
+### ATTENTION
+
+Il est possible que tu doive redémarrer visual studio code pour que ça fonctionne.
+
+Lors du prermier lancement des tests, tu devras installer le fureteur chromium lite (pour les tests) avec une ligne de commande qui te sera mentionné dans le message d'erreur.
+
+Finalement, je vais te montrer comment exécuter ces tests sur github de façon automatisée!
