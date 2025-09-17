@@ -1,4 +1,4 @@
-import '@style/Modal.scss'
+import '../style/Modal.scss'
 
 const TheModal = () => {
 

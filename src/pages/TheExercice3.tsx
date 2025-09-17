@@ -1,5 +1,5 @@
 import '@style/Layout.scss'
-import TheModal3 from '@components/TheModal3'
+import TheModal3 from '../components/TheModal3'
 
 const getLaserHolePosition = () => {
   let x = 45

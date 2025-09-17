@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Les composants et les props.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Les composants
 
-Currently, two official plugins are available:
+Tu as déjà vu comment on importe les composants jusqu'à présent. Il suffit de faire 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```tsx
+const TheComponent = () => {
+  return (
+    <h2>DuTexte</h2>
+  )
+}
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+export default TheComponent
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Et l'importer ainsi
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```tsx
+import TheComponent from './components/TheComponent'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+//html
+<TheComponent />
+//etc....
 ```
+
+Cependant, comment faire pour passer des informations différentes d'un composant à l'autre? Il faut utiliser les props.
+
+## Les props
+
+Afin de faire ça proprement, je vais te donner une procédure qui rendra ton code sexy et facile à maintenir / tester.
+
+1. Penser à ce que tu veux passer à ton composant enfant. Ici, on va passer un boolean. On va créer une interface avec ce boolean.
+l'interface se nomme toujours prospInterface.
+
+```tsx
+interface PropsInterface 
+{ 
+  booleanValuePassedInParameter: boolean 
+}
+```
+
+1. Maintenant qu'on sait ce qu'on veut importer, on doit le passer en paramètre dans la fonction de notre composant. L'interface nous permet d'améliorer la visbilité avec les opérations de déconstruction.
+
+Sans l'interface.
+```tsx
+const TheComponent = (props: { booleanValuePassedInParameter: boolean }) => {
+  return (
+    <h2>Mon bool : {props.booleanValuePassedInParameter}</h2>
+  )
+}
+
+export default TheComponent
+```
+
+Sans l'inteface, mais avec déstructuration.
+```tsx
+const TheComponent = ({booleanValuePassedInParameter}: { booleanValuePassedInParameter: boolean }) => {
+  return (
+    <h2>Mon bool : {booleanValuePassedInParameter}</h2>
+  )
+}
+
+export default TheComponent
+```
+
+Avec l'interface. Je te laisse imaginer si tu avais plusieurs valeurs à passer dans tes props, tu aurais une très longue ligne dans tes paramètres de fonction de composant. L'interface améliore la lisibilité.
+```tsx
+
+interface PropsInterface 
+{ 
+  booleanValuePassedInParameter: boolean 
+}
+
+const TheComponent = ({booleanValuePassedInParameter}: PropsInterface) => {
+  return (
+    <h2>Mon bool : {booleanValuePassedInParameter}</h2>
+  )
+}
+
+export default TheComponent
+```
+
+## Now what?
+
+Dans le dossier /pages, tu peux y trouver les exercices. Ces derniers importent des composants qui sont dans le dossier components. Bon apprentissage!

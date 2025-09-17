@@ -1,8 +1,8 @@
-import '@style/Layout.scss'
+import '../style/Layout.scss'
 import TheModal5 from '@components/TheModal5'
-import Rank from '@types/RankEnum'
-import LightSaberColor from '@types/LightSaberColorEnum'
-import { ForceWeilder } from '@types/Character'
+import Rank from '../types/RankEnum'
+import LightSaberColor from '../types/LightSaberColorEnum'
+import { ForceWeilder } from '../types/Character'
 import { useState } from 'react'
 const characters: ForceWeilder[] = [
   {

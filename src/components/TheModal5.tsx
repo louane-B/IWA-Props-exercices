@@ -1,5 +1,5 @@
-import '@style/Modal.scss'
-import ACharacterCard from '@components/ACharacterCard'
+import '../style/Modal.scss'
+import ACharacterCard from '../components/ACharacterCard'
 
 const TheModal = () => {
   const handleNext = () => {

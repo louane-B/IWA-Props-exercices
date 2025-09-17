@@ -1,4 +1,4 @@
-import '@style/CharacterCard.scss'
+import '../style/CharacterCard.scss'
 import ALightSaber from './ALightSaber'
 import LightSaberColor from '../types/LightSaberColorEnum'
 

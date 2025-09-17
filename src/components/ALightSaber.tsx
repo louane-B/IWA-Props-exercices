@@ -1,4 +1,4 @@
-import LightSaberColor from "@types/LightSaberColor"
+import LightSaberColor from "../types/LightSaberColor"
 
 interface LightSaberProps {
   color: LightSaberColor

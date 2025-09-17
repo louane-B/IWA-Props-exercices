@@ -1,12 +1,11 @@
-import '@style/Modal.scss'
+import '../style/Modal.scss'
 
 
 // Retire les lignes en commentaire pour passer un boolean en props
 // et afficher un message de jedi ou de seigneur sith
-// pour passer la valeur du boolean dans le composant, tu peux demander à chatgpt ;)
-// interface propsInterface { isJediMessage: boolean }
+// interface PropsInterface { isJediMessage: boolean }
 
-// const TheModal = ({ isJediMessage }: propsInterface) => {
+// const TheModal = ({ isJediMessage }: PropsInterface) => {
 const TheModal = () => {
 
   return (

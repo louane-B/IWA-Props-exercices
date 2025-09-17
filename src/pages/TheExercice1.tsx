@@ -1,5 +1,5 @@
-import '@style/Layout.scss'
-import TheModal1 from '@components/TheModal1'
+import '../style/Layout.scss'
+import TheModal1 from '../components/TheModal1'
 import { ChangeEvent, useState } from 'react'
 
 const TheExercice1 = () => {

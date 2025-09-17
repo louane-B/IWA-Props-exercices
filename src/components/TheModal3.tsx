@@ -1,7 +1,7 @@
-import '@style/Jedi.scss'
-import '@style/Modal.scss'
-import Jedi from '@assets/jedi.svg'
-import LaserHole from '@assets/LaserHole.svg'
+import '../style/Jedi.scss'
+import '../style/Modal.scss'
+import Jedi from '../assets/jedi.svg'
+import LaserHole from '../assets/LaserHole.svg'
 
 const TheModal = () => {
 

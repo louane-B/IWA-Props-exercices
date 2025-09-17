@@ -1,5 +1,5 @@
 import '@style/Layout.scss'
-import TheModal2 from '@components/TheModal2'
+import TheModal2 from '../components/TheModal2'
 
 const TheExercice2 = () => {
   return (
